@@ -13,4 +13,8 @@ public class BorrowerTest {
     public void hasName() {
         assertEquals("Bob the Learned", this.borrower.getName());
     }
+    @Test
+    public void canCheckBooksBorrowed(){
+        assertEquals(0,this.borrower.booksCount());
+    }
 }
