@@ -21,7 +21,7 @@ public class BorrowerTest {
     }
     @Test
     public void canAddBook(){
-        this.borrower.withdrawBook(this.book);
+        this.borrower.borrowBook(this.book);
         assertEquals(1, this.borrower.booksCount());
     }
 }
