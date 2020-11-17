@@ -20,4 +20,12 @@ public class LibraryTest {
         this.library.addBook(this.book);
         assertEquals(1, this.library.getStockCount());
     }
+    @Test
+    public void booksDoNotExceedCapacity(){
+        this.library.addBook(this.book);
+        this.library.addBook(this.book);
+        this.library.addBook(this.book);
+        this.library.addBook(this.book);
+        assertEquals(3, this.library.getStockCount());
+    }
 }
