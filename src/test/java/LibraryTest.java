@@ -8,7 +8,7 @@ public class LibraryTest {
     private Book book;
     @Before
     public void before(){
-        this.library = new Library();
+        this.library = new Library(3);
         this.book = new Book("Children Of Time", "Adrian Tchaikovsky", "Sci-Fi");
     }
     @Test
