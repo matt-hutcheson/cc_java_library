@@ -13,6 +13,14 @@ public class BookTest {
     public void hasTitle(){
         assertEquals("Children Of Time", this.book.getTitle());
     }
+    @Test
+    public void hasAuthor(){
+        assertEquals("Adrian Tchaikovsky", this.book.getAuthor());
+    }
+    @Test
+    public void hasGenre(){
+        assertEquals("Sci-Fi", this.book.getGenre());
+    }
 
 
 }
