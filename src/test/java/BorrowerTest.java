@@ -5,9 +5,11 @@ import static org.junit.Assert.assertEquals;
 
 public class BorrowerTest {
     private Borrower borrower;
+    private Book book;
     @Before
     public void before(){
         borrower = new Borrower("Bob the Learned");
+        book = new Book("Children Of Time", "Adrian Tchaikovsky", "Sci-Fi");
     }
     @Test
     public void hasName() {
@@ -16,5 +18,10 @@ public class BorrowerTest {
     @Test
     public void canCheckBooksBorrowed(){
         assertEquals(0,this.borrower.booksCount());
+    }
+    @Test
+    public void canAddBook(){
+        this.borrower.withdrawBook(this.book);
+        assertEquals(1, this.borrower.booksCount());
     }
 }
