@@ -16,4 +16,8 @@ public class Library {
             this.books.add(book);
         }
     }
+    public void lendBook(Book book, Borrower borrower){
+        borrower.borrowBook(book);
+        this.books.remove(book);
+    }
 }

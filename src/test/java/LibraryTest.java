@@ -33,7 +33,7 @@ public class LibraryTest {
     @Test
     public void canLendBook(){
         this.library.addBook(this.book);
-        this.library.lendBook(this.borrower);
+        this.library.lendBook(this.book, this.borrower);
         assertEquals(0, this.library.getStockCount());
         assertEquals(1, this.borrower.booksCount());
     }
