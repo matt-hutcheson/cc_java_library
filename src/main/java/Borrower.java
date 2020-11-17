@@ -6,8 +6,12 @@ public class Borrower {
 
     public Borrower(String name){
         this.name = name;
+        this.borrowedBooks = new ArrayList<Book>();
     }
     public String getName(){
         return this.name;
+    }
+    public int booksCount(){
+        return this.borrowedBooks.size();
     }
 }
