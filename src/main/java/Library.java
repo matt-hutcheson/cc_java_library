@@ -17,7 +17,9 @@ public class Library {
         }
     }
     public void lendBook(Book book, Borrower borrower){
-        borrower.borrowBook(book);
-        this.books.remove(book);
+        if (this.books.contains(book)) {
+            borrower.borrowBook(book);
+            this.books.remove(book);
+        }
     }
 }
